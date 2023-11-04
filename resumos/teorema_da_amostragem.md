@@ -54,14 +54,14 @@ import numpy as np
 Na = 1000 
 
 f = Na / (tf - ti) # frequencia de amostragem do sinal analogico
-T = 1. / f # tempo de amostragem do sinal analogico
+T = 1. / f # período de amostragem do sinal analogico
 
 # instante que o sinal será construído
-ti = 0
-tf = 10
-t = np.linspace(ti, tf, Na)
+ti = 0 # tempo inicial
+tf = 10 # tempo final
+t = np.linspace(ti, tf, Na) # 1000 amostras em 10 segundos
 
-# sinal digital (amostrado a partir do original)
+# sinal digital 
 y = 15*t - 0.5*9.8*t**2 # essa função é dada
 fs = 20 # frequência de amostragem
 Ts = 1. / fs # período de amostragem
